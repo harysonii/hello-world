@@ -96,7 +96,6 @@
     <icon src="www/res/icon/windows/Wide310x150Logo.scale-240.png" platform="windows" width="744" height="360"/>
     <splash src="www/res/screen/windows/SplashScreenPhone.scale-240.png" platform="windows" width="1152" height="1920"/>
   </platform>
-    <gap:plugin name="com.indigoway.cordova.whitelist.whitelistplugin" version="1.1.1" />
   <access origin="http://gothere.000webhostapp.com" subdomain="true"/>
     <uses-permission android:name="android.permission.INTERNET" />
     <allow-navigation href="*" />
