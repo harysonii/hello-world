@@ -75,14 +75,14 @@
     
     <script src="../js/jquery-2.2.3.min.js"></script>
     <script>
-    
-    $('#login_button').click(function(){
+    $(document).ready(function(){
+    $("#login_button").click(function(){
                    
         var email=$("#unique").val();
          var pass=$("#secret").val();
  if(email!="" && pass!="")
  {
-  $("#loading_spinner").css({"display":"block"});
+  //$("#loading_spinner").css({"display":"block"});
   $.ajax
   ({
   type:'post',
@@ -105,7 +105,7 @@
   }
   else
   {
-    $("#loading_spinner").css({"display":"none"});
+   // $("#loading_spinner").css({"display":"none"});
     alert("Wrong Details");
   }
   }
@@ -114,14 +114,14 @@
 
  else
  {
-  //alert("Please Fill All The Details");
+  alert("Please Fill All The Details");
      
  }
 
  return false;
 });
                
-          
+        });  
         
     </script>
     
