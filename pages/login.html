@@ -25,7 +25,7 @@
     <!-- Path to your custom app styles-->
     <link rel="stylesheet" href="../css/my-app.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/semantic.min.css">
+    <link rel="stylesheet" href="../Semantic/semantic.min.css">
     
     
     <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
@@ -33,61 +33,66 @@
 </head>
 
 <body>
-    <div style="height:100%; width:100%;margin:70px 20px 20px 20px;">
-    <h3>Gothere</h3>
+    <div style="height:80%; width:80%; margin:70px 0px 0px 20px;">
+    <img src="../img/logox.svg" style="width:44px; height:44px; display:block; margin-left:auto; margin-right:auto;"/>
     
-    <div style="margin-top:40px;">
+    <div style="margin-top:60px;">
         <h2>Welcome back!!!</h2>
-        <p>Sign in to continue<br/> to gothere,</p>
+        <p>Sign in to continue to gothere,</p>
     </div>
     
-    <form method="post" action="" >
-        <div class="list-block">
-                <ul>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-media"><i class="icon-envelope"></i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="email" id="unique" placeholder="E-mail" name="email"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-media"><i class="icon-key"></i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="password" id="secret" placeholder="Password" name="pwd"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            
-                </div> 
-        <button class="ui teal basic button" id="login_button" style="">LOG IN</button>
+          
+    <form method="post" action="" style="margin-top:90px; display:block; margin-left:auto; margin-right:auto;">
+       
+        
+        <div style="width:340px; display:block; margin-left:auto; margin-right:auto;">
+    
+            <div class="ui two column middle aligned very relaxed stackable grid">
+  <div class="column">
+    <div class="ui form">
+      <div class="field">
+        <div class="ui left icon input">
+          <input type="email" id="unique" placeholder="E-mail" name="email" >
+          <i class="mail icon"></i>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui left icon input">
+          <input type="password" id="secret" placeholder="Password" name="pwd" >
+          <i class="lock icon"></i>
+        </div>
+      </div>
+      <div class="ui teal button button-outline submit" id="login_button">Login</div>
+    </div>
+  </div>
+  <div class="ui vertical divider">
+    Or
+  </div>
+  <div class="center aligned column">
+    
+  </div>
+</div>
+    <p style="text-align:center; margin-top:60px;">Your first time?<a href="../pages/signup.html" class="link"> Sign up!</a></p>
+</div>
         
     </form>
-     <p style="text-align:center;">Don't have an account?<a href="../pages/signup.html" class="link"> Sign up!</a></p>
     </div>
     
     <script src="../js/jquery-2.2.3.min.js"></script>
     <script>
-    $(document).ready(function(){
-    $("#login_button").click(function(){
+    
+    $('#login_button').click(function(){
                    
         var email=$("#unique").val();
          var pass=$("#secret").val();
  if(email!="" && pass!="")
  {
-  //$("#loading_spinner").css({"display":"block"});
+  $("#loading_spinner").css({"display":"block"});
   $.ajax
   ({
   type:'post',
   url:'http://gothere.000webhostapp.com/do_login.php',
-  //url:'../scripts//do_login.php',
+  //url:'../scripts/do_login.php',
   data:{
    do_login:"do_login",
    email:email,
@@ -97,15 +102,15 @@
   if(response=="success")
   {
       window.localStorage.setItem("login", 1);
-     // window.localStorage.setItem("email", email);
-    //  window.localStorage.setItem("password", pass);
+      window.localStorage.setItem("email", email);
+      window.localStorage.setItem("password", pass);
                 alert("Your data is stored successfuly");
                 
     window.location.href="../index.html";
   }
   else
   {
-   // $("#loading_spinner").css({"display":"none"});
+    $("#loading_spinner").css({"display":"none"});
     alert("Wrong Details");
   }
   }
@@ -114,14 +119,14 @@
 
  else
  {
-  alert("Please Fill All The Details");
+  //alert("Please Fill All The Details");
      
  }
 
  return false;
 });
                
-        });  
+          
         
     </script>
     

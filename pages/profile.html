@@ -46,9 +46,8 @@
                         <div class="center"><i class="send icon" style="font-size:30px;margin-bottom:20px;"></i></div>
                         <div class="right">
                               <!-- Right link contains only icon - additional "icon-only" class-->
-                              <a href="#" class="link icon-only open-panel"> <i class="icon-bell" ></i></a>
-                              <a href="#" class="link icon-only open-panel"> <i class="icon-map-pin"></i></a>
-                              <a href="#" class="link icon-only open-panel"> <i class="icon-globe"></i></a>
+                    <a href="place.html" class="external link" style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
+                    <a href="search.html" class="external link" style="margin-bottom:35px;"><i class="search icon"></i></a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +61,6 @@
                     <a href="" class="external link"><i class="icon-calendar-plus-o"></i> </a>
                     <a href="create.html" class="external link"><i class="icon-feather"></i></a>
                     <a href="profile.html" class="external link"><i class="icon-child"></i></a>
-                    <a href="search.html" class="external link"><i class="icon-binoculars"></i></a>
                 </div>
             </div>
             
@@ -70,53 +68,9 @@
                 
                 <div style="width:90%; height:auto; margin:70px auto;">
                     
-                    <div class="ui fluid card">
-                        <div class="image">
-                            <img src="/images/avatar2/large/kristy.png">
-                        </div>
-                        <div class="content">
-                            <a class="header">Kristy</a>
-                                <div class="meta">
-                                    <span class="date">Joined in 2013</span>
-                                </div>
-                            <div class="description">
-                                Kristy is an art director living in New York.
-                            </div>
-                        </div>
-                        <div class="extra content">
-                            <a><i class="send icon"></i>22 Friends</a>
-                            <a><i class="alarm icon"></i>22 Friends</a>
-                            
-                        </div>
-                    </div> 
-                    
-                    <div class="ui fluid card">
-                        <div class="content">
-                            <div class="description">
-                                <p><i class="user icon"></i>Location.<i class="user icon"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="ui fluid card">
-                        <div class="content">
-                            <div class="description">
-                                <p><i class="user icon"></i>Phone no.<i class="user icon"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="ui fluid card">
-                        <div class="content">
-                            <div class="description ">
-                                <p id="h"><i class="user icon"></i>Website.<i class="user icon"></i></p>
-                            </div>
-                        </div>
-                    </div>
-                
                 </div>
             </div>
-        </div>
+         </div>
     </div>
     
     <script src="../js/jquery-2.2.3.min.js"></script>
@@ -125,15 +79,13 @@
              
              $.ajax ({
                  
-                type: 'get',
+                type: 'post',
                  url: '../scripts/profile.php',
                  dataType: "Json",
-                 success: function(data){
-                     var id = data[0];
-                     var name = data[1];
-                     $('#h').append("name:" +name);
-                 }
                  
+                 },
+                 success: function(response){
+                    $("#profile").html(response);
              });
              
          }); 

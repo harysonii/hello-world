@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="../css/my-app.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../Semantic/semantic.min.css">
+    <link rel="stylesheet" href="../milligram/milligram.min.css">
     
     
     <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
@@ -35,67 +36,30 @@
 <body>
     
     
-    <h2 style="text-align:center">Gothere</h2>
+    <img src="../img/logox.svg" style="width:44px; height:44px; display:block; margin-left:auto; margin-right:auto;margin-top:80px;"/>
+    
+    <p stype="text-align:center;">Are u a business? Sign up <a href="business.html">here</a></p>
     
     
     
     <form method="post" action="" >
-        <div class="list-block">
-                <ul>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-media"><i class="user icon"></i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="text" id="name" placeholder="Full Name" name="name"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="item-content">
-                            <div class="item-media"><i class="user icon"></i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
-                                    <input type="text" id="username" placeholder="Username" name="username"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li><li>
-                        <div class="item-content">
-                            <div class="item-media"><i class="mail icon"></i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
+        <div style="width:80%; display:block; margin-left:auto; margin-right:auto;">
+            <input type="text" id="name" placeholder="Full Name" name="name"/>               
+                   
+            <input type="text" id="username" placeholder="Username" name="username"/>
+                                
                                     <input type="email" id="unique" placeholder="E-mail" name="unique"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li><li>
-                        <div class="item-content">
-                            <div class="item-media"><i class="icon-key"></i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
+                                
                                     <input type="password" id="secret" placeholder="Password" name="secret"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li><li>
-                        <div class="item-content">
-                            <div class="item-media"><i class="intergender icon"></i></div>
-                            <div class="item-inner">
-                                <div class="item-input">
+                               
                                     <input type="text" id="sex" placeholder="Gender" name="sex"/>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            
-                </div> 
+                               
         <button class="ui basic button" id="signup_button" name="submit" style="">Sign up</button>
-        
+        </div>
     </form>
-     <p style="text-align:center;">Already have an account?<a href="../pages/login.html" class="link"> Log in!</a></p>
+    
+    <div class="ui horizontal divider">or</div>
+     <p style="text-align:center;">Not your first time?<a href="../pages/login.html" class="link"> Log in!</a></p>
     
     
     <script src="../js/jquery-2.2.3.min.js"></script>
@@ -109,9 +73,9 @@
              
              if(name != "" && username !== "" && unique != "" && secret != "" && sex != ""){
                  $.ajax({
-                     type:'POST',
-                     //url:'../scripts/signup.php',
-                     url:'http://gothere.000webhostapp.com/signup.php',
+                     type:'post',
+                     url:'../scripts/signup.php',
+                     //url:'http://gothere.000webhostapp.com/signup.php',
                      data:{
                          
                          name: name,
@@ -119,21 +83,21 @@
                          unique: unique,
                          secret: secret,
                          sex: sex
-                     },
-  success:function(response) {
-  if(response=="success")
-  {
-                
-    window.location.href="../index.html";
-  }}
+                     }
+  //success:function(response) {
+ // if(response=="success")
+ // {
+  //              
+  //  window.location.href="../index.html";
+ // }
+ // }
+      
                      });
-                 
              }
              else{
                  alert("Fill all fields");
              }
          });
-        
     </script>
     
 </body>

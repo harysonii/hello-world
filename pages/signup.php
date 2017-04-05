@@ -20,3 +20,5 @@
     mysqli_query($con, $insert);
 
     
+
+?>
