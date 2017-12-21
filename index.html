@@ -38,373 +38,128 @@
     -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
      
-    <!-- Path to Framework7 Library CSS, Material Theme -->
-    <link rel="stylesheet" href="css/framework7.material.min.css">
-    <!-- Path to Framework7 color related styles, Material Theme -->
-    <link rel="stylesheet" href="css/framework7.material.colors.min.css">
-    <!-- Path to your custom app styles-->
-    <link rel="stylesheet" href="css/my-app.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="Semantic/semantic.min.css">
-   <!-- <link rel="stylesheet" href="kube/kube.min.css">-->
+    <!-- Path to Materialize Library CSS-->
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <!-- Path to Font Awesome icons-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <!-- Path to Login custom's CSS-->
+    <link rel="stylesheet" href="css/">
     
-    <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
-    <title>gothere</title>
+    <title>create</title>
+    <style>
+       .hh {background-color:#37474f;}
+    </style>
 </head>
 
-<body>
+<body class="">
     
-     <!-- Views -->
-    <div class="views">
-      <!-- Your main view, should have "view-main" class -->
-      <div class="view view-main">
-        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
-        <div class="pages navbar-fixed toolbar-fixed">
-          <!-- Page, "data-page" contains page name -->
-            
-          <div  class="page " data-page="index">
-              
-            <!-- Top Navbar. In Material theme it should be inside of the page-->
-              
-    <div class="navbar theme-teal">
-        <div class="navbar-inner">
-            <div class="center"><i class="send icon" style="font-size:30px;margin-bottom:20px;"></i></div>
-                <div class="right">
-                    <!-- Right link contains only icon - additional "icon-only" class-->
-                    <a href="place.html" class="external link" style="margin-bottom:35px;"> <i class="building outline icon"></i></a>
-                    <a href="search.html" class="external link" style="margin-bottom:35px;"><i class="search icon"></i></a>
-                </div>
-              </div>
-            </div>
-              
-              
-              <!-- Additional "tabbar-scrollable" class -->
-                      <div class="toolbar tabbar tabbar-scrollable theme-teal">
-                        <div class="toolbar-inner " >
-                             <a style="text-transform:none;" href="#tab-1" class="tabs tab-link active" id="a">Today</a>
-                             <a style="text-transform:none;" href="#tab-2" class="tabs tab-link" id="b">In vogue</a>
-                             <a style="text-transform:none;" href="#tab-3" class="tabs tab-link" id="c">Music</a>
-                             <a style="text-transform:none;" href="#tab-4" class="tabs tab-link" id="d">Sports &amp Recreation</a>
-                             <a style="text-transform:none;" href="#tab-5" class="tabs tab-link" id="e">Fundraisers</a>
-                             <a style="text-transform:none;" href="#tab-6" class="tabs tab-link" id="f">Movies &amp Theaters</a>
-                             <a style="text-transform:none;" href="#tab-7" class="tabs tab-link" id="g">Rallies &amp Protests</a>
-                             <a style="text-transform:none;" href="#tab-8" class="tabs tab-link" id="h">Fashion &amp Gallery</a>
-                             <a style="text-transform:none;" href="#tab-9" class="tabs tab-link" id="i">Parties &amp Clubs</a>
-                             <a style="text-transform:none;" href="#tab-10" class="tabs tab-link" id="j">Comedy</a>
-                             <a style="text-transform:none;" href="#tab-11" class="tabs tab-link" id="k">Conventions &amp Talks</a>
-                          </div>
-                      </div>
-        
- 
-            <!-- Toolbar. In Material theme it should be inside of the page-->
-            <div class="toolbar toolbar-bottom theme-teal">
-              <div class="toolbar-inner">
-                <!-- Toolbar links -->
-                <a href="#" class="link"><i class="icon-eye-1"></i></a>
-                <a href="pages/schedule.html" class="link"><i class="icon-calendar-plus-o"></i> </a>
-                <a href="pages/create.html" class="external link"><i class="icon-feather"></i></a>
-                <a href="pages/profile.html" class="external link"><i class="icon-child"></i></a>
-                
-              </div>
-            </div>
- 
-            <!-- Scrollable page content -->
-            <div class="page-content" >
-             <!-- Link to another page -->
-              <div class="tab-links">
- <div class="tabs-swipeable-wrap">
-      <!-- Tabs, tabs wrapper -->
-      <div class="tabs">
-        <!-- Tab 1, active by default -->
-        <div id="tab-1" class="page-content tab active">
-          <div class="content-block">
-            ... Tab 1 content ...
-              <p id="clear" >clear</p>
-              
-               <div id="today"></div>
-          </div>
-        </div> 
-          <!-- Tab 2 -->
-        <div id="tab-2" class="page-content tab">
-          <div class="content-block">
-            ... Tab 2 content ...
-              <p id="clear" >clear</p>
-              
-               <div id="invogue"></div>
-          </div>
-        </div>
-        <!-- Tab 3 -->
-        <div id="tab-3" class="page-content tab">
-          <div class="content-block">
-            ... Tab 3 content ...
-              <div id="music"></div>
-          </div>
-        </div>
-        <!-- Tab 4 -->
-        <div id="tab-4" class="page-content tab">
-          <div class="content-block">
-            ... Tab 4 content ...
-               <div id="sports"></div>
-          </div>
-        </div>
-           <div id="tab-5" class="page-content tab">
-          <div class="content-block">
-            ... Tab 5 content ...
-               <div id="fundraiser"></div>
-          </div>
-        </div> <div id="tab-6" class="page-content tab">
-          <div class="content-block">
-            ... Tab 6 content ...
-               <div id="movies"></div>
-          </div>
-        </div> <div id="tab-7" class="page-content tab">
-          <div class="content-block">
-            ... Tab 7 content ...
-               <div id="rallies"></div>
-          </div>
-        </div>
-           <div id="tab-8" class="page-content tab">
-          <div class="content-block">
-            ... Tab 8 content ...
-               <div id="fashion"></div>
-          </div>
-        </div>
-           <div id="tab-9" class="page-content tab">
-          <div class="content-block">
-            ... Tab 9 content ...
-               <div id="parties"></div>
-          </div>
-        </div>
-           <div id="tab-10" class="page-content tab">
-          <div class="content-block">
-            ... Tab 10 content ...
-               <div id="comedy"></div>
-          </div>
-        </div>
-           <div id="tab-11" class="page-content tab">
-          <div class="content-block">
-            ... Tab 11 content ...
-               <div id="talks"></div>
-            
-              
-          </div>
-        </div>
-      </div><!--end tab class-->
-    </div>
+    <div class="ui secondary  menu hh" style="background-color:#37474f; height:60px;">
+  <a class="active white item">
+    Home
+  </a>
+  <div class="right menu">
+    <a class="ui item">
+      Logout
+    </a>
   </div>
-                
-                
-            </div> <!--end page content-->
-              
-          </div> <!-- end index page-->
-            
-                   
-    
-            
-        </div>
+</div>
+
+<div class="ui container">
+<form class="ui form">
+  <h4 class="ui dividing header">Shipping Information</h4>
+  <div class="field">
+  <label for="file" class="ui icon button">
+  <i class="file icon"></i>Open Event image</label>
+  <input type="file" id="file" style="display:none;"/>
+  </div>
+  <div class="field">
+    <label>Name</label>
+    <div class="two fields">
+      <div class="field">
+        <input type="text" name="shipping[first-name]" placeholder="First Name">
+      </div>
+      <div class="field">
+        <input type="text" name="shipping[last-name]" placeholder="Last Name">
       </div>
     </div>
+  </div>
+  <div class="field">
+    <label>Billing Address</label>
+    <div class="fields">
+      <div class="twelve wide field">
+        <input type="text" name="shipping[address]" placeholder="Street Address">
+      </div>
+      <div class="four wide field">
+        <input type="text" name="shipping[address-2]" placeholder="Apt #">
+      </div>
+    </div>
+  </div>
+  </form>
+</div>
+   
     
-    <!-- Path to Framework7 Library JS-->
-    <script type="text/javascript" src="js/framework7.min.js"></script>
-    <!-- Path to your app js-->
-    <script type="text/javascript" src="js/my-app.js"></script>
-    <script type="text/javascript" src="cordova.js"></script>
-    <script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
-    <!--<script type="text/javascript" src="js/index.js"></script>-->
-    <script type="text/javascript">
-      
-            
-           $(window).load(function() {
-       
-	
-               // alert("All clear");
-  /// if(window.localStorage.getItem("login") != 1) {
-        
-    // window.location.href="pages/login.html";
-      // alert('All clear');
-  // }
+    <!-- Path to jQuery Library-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <!-- Path to Materilize Library (javaScript)-->
+    <script src="js/semantic.min.js"></script>
+    <!-- Path to Tinymce Editor Library -->
+    <script src="tinymce/tinymce.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+               
+              // if( typeof window.localStorage.getItem("login") !== 'undefined' && window.localStorage.getItem("login") != 1) {
+              //      window.location.href="login.html";
+    
+              //  }else {
+    
+	           /*$.ajax({
+                
+                  type: 'get',
+                  url: 'http://gothere.000webhostapp.com/check_status.php',
+                   dataType: 'html',
+                  success: function (response) {
+                        
+                        if (response == "ok") {
+                            
+                        }else {
+                            window.location.href="login.html";
+                        }
+                        
+                    }
+                      
+                   
+               });  */
+                    
+                
+               
                 });
-        
-              $("#a").click(function(){
-                   $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/gettoday.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#today').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-              
-        
-        $("#b").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/getin_vogue.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#invogue').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#c").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/getmusic.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#music').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#d").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/getsports_rec.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#sports').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#e").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_fundraisers.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#fundraiser').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#f").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_movies.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#movies').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#g").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_rallies.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#rallies').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#h").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_fashion_gallery.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#fashion').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#i").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_parties_clubs.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#parties').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#j").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_comedy.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#comedy').html(response);
-                        
-                    }
-                   
-               });
-              }); 
-        
-        $("#k").click(function(){
-               $.ajax({
-                
-                  type: 'get',
-                  url: 'scripts/get_conventions_talks.php',
-                   dataType: 'html',
-                  success: function (response) {
-                        
-                        $('#talks').html(response);
-                        
-                    }
-                   
-               });
-              });
-              
-                 
-           $(document).ready(function() {
-               $("#clear").click(function(){
-                 window.localStorage.removeItem("login");
-                   
-                   if(window.localStorage.getItem("login") != 1) {
-                   window.location.href="pages/login.html";
-                   }
-               });
-           });
+        $(document).ready(function(){
        
+            
+            
+function logout() {
+       $.ajax({
+                
+       type: 'get',
+                url: 'http://gothere.000webhostapp.com/logout.php',
+                //url: 'logout.php',
+                success: function (response) {
+                        
+                      if (response == "success") {
+                            
+                           window.location.href="login.html";
+                            
+                     }else{
+                            
+                       alert("You were not logged out");
+                            
+                         }
+                        
+                    }
+                
+          });
+            
+        }
     </script>
-    
-</body>
-
+    </body>
 </html>
