@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding='utf-8'?>
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="io.gothere.app" version="1.0.0">
-  <name>gothere</name>
+  <name>test</name>
   <description>Never get bored!!! Find all kind of events here</description>
   <author href="http://www.gothere.io" email="support@gothere.io">Gothere Team</author>
   <content src="index.html"/>
